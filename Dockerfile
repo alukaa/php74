@@ -22,6 +22,6 @@ RUN pecl install -o -f redis \
 
 RUN curl -sS https://getcomposer.org/installer | php -- \
 --install-dir=/usr/bin --filename=composer
-RUN  chmod a+x /usr/local/bin/composer \
+RUN  chmod a+x /usr/bin/composer \
     && composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
 COPY ./upload.ini /usr/local/etc/php/conf.d/upload.ini
